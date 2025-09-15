@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-50 text-gray-800">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { primary: "#3b82f6" } } },
+      };
+    </script>
+  </head>
+
+  <body class="p-6 max-w-5xl mx-auto">
+    <header class="mb-8 text-center">
+      <h1 class="text-3xl font-bold mb-2">Student Registration System</h1>
+      <p class="text-gray-600 text-sm">
+        Please fill in all details carefully. All fields are mandatory.
+      </p>
+    </header>
+
+    <form
+      id="studentForm"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 bg-white p-6 rounded-lg shadow"
+    >
+      <div>
+        <label for="studentNameInput" class="block text-sm font-medium"
+          >Student Name</label
+        >
+        <input
+          type="text"
+          id="studentNameInput"
+          placeholder="Full Name"
+          class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+      </div>
+
+      <div>
+        <label for="studentIdInput" class="block text-sm font-medium"
+          >Student ID</label
+        >
+        <input
+          type="number"
+          id="studentIdInput"
+          placeholder="Student ID"
+          class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+      </div>
+
+      <div>
+        <label for="emailInput" class="block text-sm font-medium">Email</label>
+        <input
+          type="email"
+          id="emailInput"
+          placeholder="Email"
+          class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+      </div>
+
+      <div>
+        <label for="contactNumberInput" class="block text-sm font-medium"
+          >Contact Number</label
+        >
+        <input
+          type="number"
+          id="contactNumberInput"
+          placeholder="Contact Number"
+          class="mt-1 w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+        />
+      </div>
+
+      <div class="col-span-1 md:col-span-2 lg:col-span-4 text-right">
+        <button
+          id="btnSubmit"
+          type="submit"
+          class="mt-4 inline-flex items-center gap-2 bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded shadow"
+        >
+          <i class="fas fa-paper-plane"></i>
+          Submit
+        </button>
+      </div>
+    </form>
+
+    <section class="overflow-x-auto bg-white rounded-lg shadow">
+      <table id="contentTable" class="w-full table-auto text-sm">
+        <thead class="bg-primary text-white">
+          <tr>
+            <th class="px-4 py-2 text-left">Student Name</th>
+            <th class="px-4 py-2 text-left">ID</th>
+            <th class="px-4 py-2 text-left">Email</th>
+            <th class="px-4 py-2 text-left">Contact</th>
+            <th class="px-4 py-2 text-center">Edit</th>
+            <th class="px-4 py-2 text-center">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200"></tbody>
+      </table>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
